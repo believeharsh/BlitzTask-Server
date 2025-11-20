@@ -3,12 +3,28 @@ import cors from 'cors';
 import taskRoutes from './routes/task.routes';
 import './config/database';
 import dotenv from 'dotenv';
+import { keepAlive } from './services/keepAlive';
 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+
+if (process.env.NODE_ENV === 'production') {
+  const url = 'https://blitztask-server.onrender.com';
+  keepAlive(url);
+}
+
+
+// CORS configuration
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 dotenv.config();
 
