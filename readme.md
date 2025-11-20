@@ -1,4 +1,4 @@
-# Task Management API - Backend (TypeScript)
+# BlitzTask - Backend (TypeScript)
 
 A RESTful API built with Node.js, Express.js, TypeScript, and PostgreSQL for managing tasks.
 
@@ -131,3 +131,7 @@ Build command: `npm run build`
 Start command: `npm start`
 
 Don't forget to add your `DATABASE_URL` environment variable in the hosting platform.
+
+**Built  by Harsh Dahiya Associated with Cent Stage By Gulsher Kooner 💖**
+
+⭐ **If you find this project useful, please give it a star!** 
